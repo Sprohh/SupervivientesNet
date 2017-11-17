@@ -1,0 +1,312 @@
+create database automatizacion_canchas
+
+
+create table contact
+{
+	idContact int primary key,
+	name varchar (30) not null,
+	email varchar (30) not null,
+	campus varchar (30) not null,
+	comment varchar (300) not null,
+}
+
+create table account
+(
+	username varchar(10) primary key,
+	password varchar(30) not null
+)
+
+
+INSERT INTO account VALUES('Kylan','augue');
+INSERT INTO account VALUES('Xantha','eget');
+INSERT INTO account VALUES('Ainsley','Suspendisse');
+INSERT INTO account VALUES('Clarke','eget');
+INSERT INTO account VALUES('Kevin','Donec');
+INSERT INTO account VALUES('Macaulay','interdum');
+INSERT INTO account VALUES('Ivy','venenatis');
+INSERT INTO account VALUES('Nerea','Aenean');
+INSERT INTO account VALUES('Alexis','musica');
+INSERT INTO account VALUES('John','ligula');
+
+INSERT INTO account VALUES('Dane','acuenta');
+INSERT INTO account VALUES('Anne','seminario');
+INSERT INTO account VALUES('Cara','adipiscing');
+INSERT INTO account VALUES('Warren','massa');
+INSERT INTO account VALUES('Ulla','cursus');
+INSERT INTO account VALUES('Adrian','amigo');
+INSERT INTO account VALUES('Jameson','est.');
+INSERT INTO account VALUES('Sydnee','nibh');
+INSERT INTO account VALUES('Harper','necio');
+INSERT INTO account VALUES('Serina','Aliquam');
+
+INSERT INTO account VALUES('Hadley','auctor');
+INSERT INTO account VALUES('Arsenio','cursus');
+INSERT INTO account VALUES('Jayme','neque');
+INSERT INTO account VALUES('Kelsey','ante');
+INSERT INTO account VALUES('Wynne','Pellentesque');
+INSERT INTO account VALUES('Rae','ideas');
+INSERT INTO account VALUES('Aidan','faucibus');
+INSERT INTO account VALUES('Martino','ligula');
+INSERT INTO account VALUES('Denton','velit');
+INSERT INTO account VALUES('Eliana','Ut');
+
+INSERT INTO account VALUES('Anjolie','molestie');
+INSERT INTO account VALUES('Aurelia','sodales');
+INSERT INTO account VALUES('Ila','necas');
+INSERT INTO account VALUES('Azalia','feugiat');
+INSERT INTO account VALUES('Abra','cursus');
+INSERT INTO account VALUES('Keane','bibendum');
+INSERT INTO account VALUES('Davis','Quisque');
+INSERT INTO account VALUES('Martin','Aliquam');
+INSERT INTO account VALUES('Bruno','ligula');
+INSERT INTO account VALUES('Casey','molestie');
+
+INSERT INTO account VALUES('Cole','amet');
+INSERT INTO account VALUES('Hu','elit');
+INSERT INTO account VALUES('Holly','lobortis');
+INSERT INTO account VALUES('Barclay','euera');
+INSERT INTO account VALUES('Carol','egestas');
+INSERT INTO account VALUES('Sylvester','posuere');
+INSERT INTO account VALUES('Chadwick','uttata');
+INSERT INTO account VALUES('Naomi','urna');
+INSERT INTO account VALUES('Lila','none');
+INSERT INTO account VALUES('Halla','nonummy');
+
+INSERT INTO account VALUES('Harding','non');
+INSERT INTO account VALUES('Grady','acusar');
+INSERT INTO account VALUES('Raven','lorem,');
+INSERT INTO account VALUES('Silas','nonummy');
+INSERT INTO account VALUES('Tad','atacd');
+INSERT INTO account VALUES('Caesar','commodo');
+INSERT INTO account VALUES('Destiny','diam');
+INSERT INTO account VALUES('Shafira','Class');
+INSERT INTO account VALUES('Kamal','lobortis');
+INSERT INTO account VALUES('Ayanna','utas');
+
+INSERT INTO account VALUES('Fitzgerald','utias');
+INSERT INTO account VALUES('Branden','dignissim');
+INSERT INTO account VALUES('Heather','sed');
+INSERT INTO account VALUES('Macon','nec');
+INSERT INTO account VALUES('Shay','egestas');
+INSERT INTO account VALUES('Howard','ut');
+INSERT INTO account VALUES('Acton','diam');
+INSERT INTO account VALUES('Nomlanga','velit');
+INSERT INTO account VALUES('Janna','leo');
+INSERT INTO account VALUES('Barry','Sed');
+
+INSERT INTO account VALUES('Barrett','Praesent');
+INSERT INTO account VALUES('Yuli','varius');
+INSERT INTO account VALUES('Kiara','malesuada');
+INSERT INTO account VALUES('Echo','tellus');
+INSERT INTO account VALUES('Jael','adipiscing');
+INSERT INTO account VALUES('Jonah','inas');
+INSERT INTO account VALUES('Abel','purus');
+INSERT INTO account VALUES('September','quam');
+INSERT INTO account VALUES('Avram','Nunc');
+INSERT INTO account VALUES('Georgia','ante');
+
+INSERT INTO account VALUES('Yael','etds');
+INSERT INTO account VALUES('Gregory','gravida.');
+INSERT INTO account VALUES('Brayan','semper');
+INSERT INTO account VALUES('Garth','at');
+INSERT INTO account VALUES('Jordan','ipsum');
+INSERT INTO account VALUES('Jin','ornare');
+INSERT INTO account VALUES('Harding','non,');
+INSERT INTO account VALUES('Palmer','purus');
+INSERT INTO account VALUES('Kareem','ante');
+INSERT INTO account VALUES('Jesse','semper');
+
+INSERT INTO account VALUES('Eliana','libero');
+INSERT INTO account VALUES('Britanney','Cum');
+INSERT INTO account VALUES('Wilma','tortor,');
+INSERT INTO account VALUES('Briar','Mauris');
+INSERT INTO account VALUES('Alan','montes');
+INSERT INTO account VALUES('Cameron','et');
+INSERT INTO account VALUES('Addison','netus');
+INSERT INTO account VALUES('Chaim','malesuada');
+INSERT INTO account VALUES('Beverly','nisi');
+INSERT INTO account VALUES('Alana','convallis');
+
+create table infrastructure
+(
+	idinfrastructure int primary key,
+	name varchar (20) not null
+)
+
+INSERT INTO infrastructure VALUES(01,'Baby Futbol')
+INSERT INTO infrastructure VALUES(02,'Gimnasio')
+INSERT INTO infrastructure VALUES(03,'Cancha')
+INSERT INTO infrastructure VALUES(04,'Otros')
+
+create table dayoftheweek
+(
+	idday int primary key,
+	name varchar (10) not null
+)
+
+INSERT INTO dayoftheweek VALUES(01,'Lunes')
+INSERT INTO dayoftheweek VALUES(02,'Martes')
+INSERT INTO dayoftheweek VALUES(03,'Miercoles')
+INSERT INTO dayoftheweek VALUES(04,'Jueves')
+INSERT INTO dayoftheweek VALUES(05,'Viernes')
+INSERT INTO dayoftheweek VALUES(06,'Sabado')
+
+create table block
+(
+	idblock int primary key,
+	name varchar (15) not null
+)
+
+INSERT INTO block VALUES(01,'08:31 - 09:15')
+INSERT INTO block VALUES(02,'09:16 - 10:00')
+INSERT INTO block VALUES(03,'10:01 - 10:45')
+INSERT INTO block VALUES(04,'10:46 - 11:30')
+INSERT INTO block VALUES(05,'11:31 - 12:15')
+INSERT INTO block VALUES(06,'12:16 - 13:00')
+INSERT INTO block VALUES(07,'14:30 - 15:15')
+INSERT INTO block VALUES(08,'15:16 - 16:00')
+INSERT INTO block VALUES(09,'16:01 - 16:45')
+INSERT INTO block VALUES(10,'16:46 - 17:30')
+INSERT INTO block VALUES(11,'17:31 - 18:15')
+INSERT INTO block VALUES(12,'18:16 - 19:00')
+INSERT INTO block VALUES(13,'19:01 - 19:45')
+INSERT INTO block VALUES(14,'19:46 - 20:30')
+INSERT INTO block VALUES(15,'20:31 - 21:15')
+
+
+create table petition
+(
+	idpetition int primary key,
+	dayoftheweek int not null foreign key references dayoftheweek("idday"),
+	block int not null foreign key references block("idblock"),
+	account varchar(10) not null foreign key references account("username"),
+	infrastructure int not null foreign key references infrastructure ("idinfrastructure")
+)
+
+INSERT INTO petition VALUES(1,1,1,'Kylan',01);
+INSERT INTO petition VALUES(2,1,1,'Cara',03);
+INSERT INTO petition VALUES(3,3,2,'Adrian',01);
+INSERT INTO petition VALUES(4,2,10,'Warren',02);
+INSERT INTO petition VALUES(5,3,1,'Ulla',02);
+INSERT INTO petition VALUES(6,6,10,'John',04);
+INSERT INTO petition VALUES(7,5,1,'Alexis',01);
+INSERT INTO petition VALUES(8,5,4,'Dane',04);
+INSERT INTO petition VALUES(9,6,1,'Anne',02);
+INSERT INTO petition VALUES(10,4,1,'Nerea',04);
+
+INSERT INTO petition VALUES(11,5,8,'Xantha',04);
+INSERT INTO petition VALUES(12,2,7,'Ainsley',01);
+INSERT INTO petition VALUES(13,2,5,'Ivy',02);
+INSERT INTO petition VALUES(14,4,7,'Clarke',03);
+INSERT INTO petition VALUES(15,5,3,'Kevin',01);
+INSERT INTO petition VALUES(16,3,14,'Adrian',04);
+INSERT INTO petition VALUES(17,4,12,'Jameson',04);
+INSERT INTO petition VALUES(18,6,5,'Sydnee',02);
+INSERT INTO petition VALUES(19,5,7,'Harper',01);
+INSERT INTO petition VALUES(20,4,4,'Serina',03);
+
+INSERT INTO petition VALUES(21,4,2,'Hadley',04);
+INSERT INTO petition VALUES(22,3,11,'Arsenio',04);
+INSERT INTO petition VALUES(23,5,10,'Jayme',04);
+INSERT INTO petition VALUES(24,2,4,'Kelsey',04);
+INSERT INTO petition VALUES(25,2,6,'Wynne',04);
+INSERT INTO petition VALUES(26,2,7,'Rae',03);
+INSERT INTO petition VALUES(27,1,3,'Aidan',02);
+INSERT INTO petition VALUES(28,1,4,'Martino',01);
+INSERT INTO petition VALUES(29,3,15,'Denton',04);
+INSERT INTO petition VALUES(30,4,14,'Eliana',04);
+
+INSERT INTO petition VALUES(31,2,12,'Anjolie',02);
+INSERT INTO petition VALUES(32,6,3,'Aurelia',04);
+INSERT INTO petition VALUES(33,6,1,'Ila',04);
+INSERT INTO petition VALUES(34,3,3,'Azalia',04);
+INSERT INTO petition VALUES(35,4,4,'Abra',02);
+INSERT INTO petition VALUES(36,4,5,'Keane',03);
+INSERT INTO petition VALUES(37,4,10,'Davis',04);
+INSERT INTO petition VALUES(38,5,7,'Martin',04);
+INSERT INTO petition VALUES(39,2,12,'Bruno',01);
+INSERT INTO petition VALUES(40,2,13,'Casey',01);
+
+INSERT INTO petition VALUES(41,3,2,'Cole',03);
+INSERT INTO petition VALUES(42,2,13,'Hu',02);
+INSERT INTO petition VALUES(43,3,7,'Holly',04);
+INSERT INTO petition VALUES(44,3,8,'Barclay',04);
+INSERT INTO petition VALUES(45,2,9,'Carol',04);
+INSERT INTO petition VALUES(46,2,1,'Sylvester',03);
+INSERT INTO petition VALUES(47,4,2,'Chadwick',03);
+INSERT INTO petition VALUES(48,6,4,'Naomi',03);
+INSERT INTO petition VALUES(49,2,1,'Lila',02);
+INSERT INTO petition VALUES(50,3,1,'Halla',01);
+
+INSERT INTO petition VALUES(51,6,2,'Harding',04);
+INSERT INTO petition VALUES(52,3,5,'Grady',04);
+INSERT INTO petition VALUES(53,2,3,'Raven',02);
+INSERT INTO petition VALUES(54,1,4,'Silas',03);
+INSERT INTO petition VALUES(55,6,2,'Tad',03);
+INSERT INTO petition VALUES(56,5,6,'Caesar',04);
+INSERT INTO petition VALUES(57,4,3,'Destiny',04);
+INSERT INTO petition VALUES(58,3,4,'Shafira',03);
+INSERT INTO petition VALUES(59,5,2,'Kamal',03);
+INSERT INTO petition VALUES(60,6,1,'Ayanna',03);
+
+INSERT INTO petition VALUES(61,2,2,'Alan',01);
+INSERT INTO petition VALUES(62,2,6,'Branden',01);
+INSERT INTO petition VALUES(63,3,8,'Heather',01);
+INSERT INTO petition VALUES(64,5,2,'Macon',02);
+INSERT INTO petition VALUES(65,2,5,'Shay',03);
+INSERT INTO petition VALUES(66,5,4,'Howard',02);
+INSERT INTO petition VALUES(67,5,5,'Acton',02);
+INSERT INTO petition VALUES(68,6,5,'Nomlanga',03);
+INSERT INTO petition VALUES(69,5,7,'Janna',02);
+INSERT INTO petition VALUES(70,1,4,'Barry',04);
+
+INSERT INTO petition VALUES(71,2,12,'Barrett',04);
+INSERT INTO petition VALUES(72,2,11,'Yuli',01);
+INSERT INTO petition VALUES(73,5,14,'Kiara',02);
+INSERT INTO petition VALUES(74,4,4,'Echo',04);
+INSERT INTO petition VALUES(75,5,2,'Jael',04);
+INSERT INTO petition VALUES(76,6,4,'Jonah',04);
+INSERT INTO petition VALUES(77,6,6,'Abel',01);
+INSERT INTO petition VALUES(78,3,4,'September',02);
+INSERT INTO petition VALUES(79,4,3,'Avram',03);
+INSERT INTO petition VALUES(80,4,6,'Georgia',03);
+
+INSERT INTO petition VALUES(81,4,7,'Yael',04);
+INSERT INTO petition VALUES(82,5,8,'Gregory',03);
+INSERT INTO petition VALUES(83,6,8,'Brayan',03);
+INSERT INTO petition VALUES(84,4,6,'Garth',02);
+INSERT INTO petition VALUES(85,6,2,'Jordan',02);
+INSERT INTO petition VALUES(86,1,2,'Jin',02);
+INSERT INTO petition VALUES(87,3,5,'Harding',01);
+INSERT INTO petition VALUES(88,2,11,'Palmer',04);
+INSERT INTO petition VALUES(89,1,12,'Kareem',03);
+INSERT INTO petition VALUES(90,1,12,'Jesse',04);
+
+INSERT INTO petition VALUES(91,1,2,'Eliana',03);
+INSERT INTO petition VALUES(92,3,4,'Britanney',01);
+INSERT INTO petition VALUES(93,1,2,'Wilma',01);
+INSERT INTO petition VALUES(94,1,7,'Briar',02);
+INSERT INTO petition VALUES(95,4,8,'Alan',03);
+INSERT INTO petition VALUES(96,1,6,'Cameron',04);
+INSERT INTO petition VALUES(97,2,8,'Addison',03);
+INSERT INTO petition VALUES(98,1,7,'Chaim',03);
+INSERT INTO petition VALUES(99,2,7,'Beverly',02);
+INSERT INTO petition VALUES(100,1,3,'Alana',01);
+
+delete from petition;
+
+select * from information_schema.tables;
+select * from petition
+
+select p.idpetition as IdPedido,
+		dotw.name as Dia,
+		bl.name as Bloque,
+		account as Cuenta,
+		inf.name as Infraestructura
+ from petition p join dayoftheweek dotw
+ on (p.dayoftheweek = dotw.idday)
+ join infrastructure inf
+ on (p.infrastructure = inf.idinfrastructure)
+ join block bl
+ on (p.block = bl.idblock)
+ order by p.infrastructure, dotw.idday, bl.idblock;
