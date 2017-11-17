@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AutomatizacionModelStoreContainer" CdmEntityContainer="AutomatizacionEntities">
+    <EntitySetMapping Name="account">
+      <EntityTypeMapping TypeName="AutomatizacionModel.account">
+        <MappingFragment StoreEntitySet="account">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="block">
+      <EntityTypeMapping TypeName="AutomatizacionModel.block">
+        <MappingFragment StoreEntitySet="block">
+          <ScalarProperty Name="idblock" ColumnName="idblock" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contact">
+      <EntityTypeMapping TypeName="AutomatizacionModel.contact">
+        <MappingFragment StoreEntitySet="contact">
+          <ScalarProperty Name="idContact" ColumnName="idContact" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="campus" ColumnName="campus" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dayoftheweek">
+      <EntityTypeMapping TypeName="AutomatizacionModel.dayoftheweek">
+        <MappingFragment StoreEntitySet="dayoftheweek">
+          <ScalarProperty Name="idday" ColumnName="idday" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infrastructure">
+      <EntityTypeMapping TypeName="AutomatizacionModel.infrastructure">
+        <MappingFragment StoreEntitySet="infrastructure">
+          <ScalarProperty Name="idinfrastructure" ColumnName="idinfrastructure" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="petition">
+      <EntityTypeMapping TypeName="AutomatizacionModel.petition">
+        <MappingFragment StoreEntitySet="petition">
+          <ScalarProperty Name="idpetition" ColumnName="idpetition" />
+          <ScalarProperty Name="dayoftheweek" ColumnName="dayoftheweek" />
+          <ScalarProperty Name="block" ColumnName="block" />
+          <ScalarProperty Name="account" ColumnName="account" />
+          <ScalarProperty Name="infrastructure" ColumnName="infrastructure" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

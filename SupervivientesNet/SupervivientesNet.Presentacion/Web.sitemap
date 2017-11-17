@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Index.aspx" title="Inicio"  description="">
+    <siteMapNode url="Contacto.aspx" title="Contacto"  description="" />
+    <siteMapNode url="Reglas y Normas.aspx" title="Reglas y Normas"  description="" />
+    <siteMapNode url="" title="Horarios"  description="" >
+      <siteMapNode url="Horario Multicancha.aspx" title="Multicancha"  description="" />
+      <siteMapNode url="Horario Gimnasio.aspx" title="Gimnasio"  description="" />
+      <siteMapNode url="Horario Futbolito.aspx" title="Cancha"  description="" />
+      <siteMapNode url="Horario Otros.aspx" title="Otros"  description="" />
+    </siteMapNode>
+    <siteMapNode url="Solicitudes.aspx" title="Procesar solicitud"  description="" />
+    <siteMapNode url="Estadisticas.aspx" title="Ver Estadísticas"  description="" />
+  </siteMapNode>
+</siteMap>

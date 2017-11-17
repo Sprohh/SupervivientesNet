@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AutomatizacionModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="petition" Relationship="Self.FK__petition__accoun__534D60F1" FromRole="account" ToRole="petition" />
+  </EntityType>
+  <EntityType Name="block">
+    <Key>
+      <PropertyRef Name="idblock" />
+    </Key>
+    <Property Name="idblock" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="petition" Relationship="Self.FK__petition__block__52593CB8" FromRole="block" ToRole="petition" />
+  </EntityType>
+  <EntityType Name="contact">
+    <Key>
+      <PropertyRef Name="idContact" />
+    </Key>
+    <Property Name="idContact" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="campus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="dayoftheweek">
+    <Key>
+      <PropertyRef Name="idday" />
+    </Key>
+    <Property Name="idday" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="petition" Relationship="Self.FK__petition__dayoft__5165187F" FromRole="dayoftheweek" ToRole="petition" />
+  </EntityType>
+  <EntityType Name="infrastructure">
+    <Key>
+      <PropertyRef Name="idinfrastructure" />
+    </Key>
+    <Property Name="idinfrastructure" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="petition" Relationship="Self.FK__petition__infras__5441852A" FromRole="infrastructure" ToRole="petition" />
+  </EntityType>
+  <EntityType Name="petition">
+    <Key>
+      <PropertyRef Name="idpetition" />
+    </Key>
+    <Property Name="idpetition" Type="Int32" Nullable="false" />
+    <Property Name="dayoftheweek" Type="Int32" Nullable="false" />
+    <Property Name="block" Type="Int32" Nullable="false" />
+    <Property Name="account" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="infrastructure" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="account1" Relationship="Self.FK__petition__accoun__534D60F1" FromRole="petition" ToRole="account" />
+    <NavigationProperty Name="block1" Relationship="Self.FK__petition__block__52593CB8" FromRole="petition" ToRole="block" />
+    <NavigationProperty Name="dayoftheweek1" Relationship="Self.FK__petition__dayoft__5165187F" FromRole="petition" ToRole="dayoftheweek" />
+    <NavigationProperty Name="infrastructure1" Relationship="Self.FK__petition__infras__5441852A" FromRole="petition" ToRole="infrastructure" />
+  </EntityType>
+  <Association Name="FK__petition__accoun__534D60F1">
+    <End Role="account" Type="Self.account" Multiplicity="1" />
+    <End Role="petition" Type="Self.petition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="account">
+        <PropertyRef Name="username" />
+      </Principal>
+      <Dependent Role="petition">
+        <PropertyRef Name="account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__petition__block__52593CB8">
+    <End Role="block" Type="Self.block" Multiplicity="1" />
+    <End Role="petition" Type="Self.petition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="block">
+        <PropertyRef Name="idblock" />
+      </Principal>
+      <Dependent Role="petition">
+        <PropertyRef Name="block" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__petition__dayoft__5165187F">
+    <End Role="dayoftheweek" Type="Self.dayoftheweek" Multiplicity="1" />
+    <End Role="petition" Type="Self.petition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dayoftheweek">
+        <PropertyRef Name="idday" />
+      </Principal>
+      <Dependent Role="petition">
+        <PropertyRef Name="dayoftheweek" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__petition__infras__5441852A">
+    <End Role="infrastructure" Type="Self.infrastructure" Multiplicity="1" />
+    <End Role="petition" Type="Self.petition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="infrastructure">
+        <PropertyRef Name="idinfrastructure" />
+      </Principal>
+      <Dependent Role="petition">
+        <PropertyRef Name="infrastructure" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AutomatizacionEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="account" EntityType="Self.account" />
+    <EntitySet Name="block" EntityType="Self.block" />
+    <EntitySet Name="contact" EntityType="Self.contact" />
+    <EntitySet Name="dayoftheweek" EntityType="Self.dayoftheweek" />
+    <EntitySet Name="infrastructure" EntityType="Self.infrastructure" />
+    <EntitySet Name="petition" EntityType="Self.petition" />
+    <AssociationSet Name="FK__petition__accoun__534D60F1" Association="Self.FK__petition__accoun__534D60F1">
+      <End Role="account" EntitySet="account" />
+      <End Role="petition" EntitySet="petition" />
+    </AssociationSet>
+    <AssociationSet Name="FK__petition__block__52593CB8" Association="Self.FK__petition__block__52593CB8">
+      <End Role="block" EntitySet="block" />
+      <End Role="petition" EntitySet="petition" />
+    </AssociationSet>
+    <AssociationSet Name="FK__petition__dayoft__5165187F" Association="Self.FK__petition__dayoft__5165187F">
+      <End Role="dayoftheweek" EntitySet="dayoftheweek" />
+      <End Role="petition" EntitySet="petition" />
+    </AssociationSet>
+    <AssociationSet Name="FK__petition__infras__5441852A" Association="Self.FK__petition__infras__5441852A">
+      <End Role="infrastructure" EntitySet="infrastructure" />
+      <End Role="petition" EntitySet="petition" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

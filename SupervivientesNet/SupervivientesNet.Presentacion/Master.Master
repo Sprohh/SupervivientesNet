@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="SupervivientesNet.Presentacion.Master" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head runat="server">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DuocUC-Solicitud Infraestructura</title>
+      <asp:ContentPlaceHolder ID="head" runat="server">
+      </asp:ContentPlaceHolder>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom fonts for this template -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+      <form id="form1" runat="server">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<asp:Menu ID="Menu1"  type="button" class="navbar-toggle collapsed" data-toggle="collapse" runat="server" DataSourceID="SiteMapDataSource1"></asp:Menu>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+      <div class="container">
+        <a class="navbar-brand" href="Index.aspx" style="text-decoration:none">            
+             <img class="navbar-brand"src="img/logo.png" width="100"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="Index.aspx">Inicio</a>
+            </li>
+            <li class="nav-item" data-toggle="dropdown">
+              <a class="nav-link" href="Recintos.aspx">Horario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Reglas y Normas.aspx">Reglas y Normas</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="Solicitudes.aspx">Procesar Solicitud</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contacto.aspx">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <asp:LoginStatus ID="LoginStatus1" runat="server" class="nav-link"/>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+    <!-- Header -->
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+      <!-- /.container -->
+
+   
+    <!-- /.content-section-a -->
+
+    <aside class="banner">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 my-auto">
+            <h2>Siguenos en nuestras Redes Sociales:</h2>
+          </div>
+          <div class="col-lg-6 my-auto">
+            <ul class="list-inline banner-social-buttons">
+              <li class="list-inline-item">
+                <a href="https://twitter.com/duocuc?lang=es" class="btn btn-secondary btn-lg">
+                  <i class="fa fa-twitter fa-fw"></i>
+                  <span class="network-name">Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/DuocUC.Maipu/" class="btn btn-secondary btn-lg">
+                  <i class="fa fa-facebook fa-fw"></i>
+                  <span class="network-name">Facebook</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="http://www.duoc.cl/adm/" class="btn btn-secondary btn-lg">
+                  <i class="fa fa-pencil fa-fw"></i>
+                  <span class="network-name">DuocUC</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+
+    </aside>
+    <!-- /.banner -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="Index.aspx">Inicio</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="Contacto.aspx">Contacto</a>
+          </li>
+        </ul>
+        <p class="copyright text-muted small">Copyright &copy; Brayan Mendez - Sergio Orellana 2017. All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    </form>
+  </body>
+
+</html>
+
+

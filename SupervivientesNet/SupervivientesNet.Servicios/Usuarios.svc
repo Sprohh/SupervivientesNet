@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SupervivientesNet.Servicios.Service1" CodeBehind="Usuarios.svc.cs" %>
